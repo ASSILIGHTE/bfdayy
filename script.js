@@ -3,7 +3,7 @@
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
-    
+
     // ----------------------------------------------------------------------
     // 0. BILINGUAL I18N DICTIONARY SYSTEM (INDONESIAN & ENGLISH)
     // ----------------------------------------------------------------------
@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
             btnYes: "Mau! ♡",
             btnNo: "Enggak",
             funnyNoTexts: ['Yakin nih? 🥺', 'Beneran? 😜', 'Salah pencet tuh! ♡', 'Mau! ♡'],
-            
+
             // Section 1
             sec1Badge: "Bagian 01",
             sec1Title: "Hal-Hal yang Aku Suka Dari Kamu... ♡",
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
             note5Text: "ya… kamu ♡",
             note5Sub: "Semua hal tentang kamu. Apa adanya kamu, setiap hari.",
             tapHint: "tekan aku! ♡",
-            
+
             // Section 2
             sec2Badge: "Bagian 02",
             sec2Title: "Momen-Momen Manis Kita 📸",
@@ -59,10 +59,10 @@ document.addEventListener('DOMContentLoaded', () => {
             rewardCode: "KODE: BOYFRIEND-LOVE-FOREVER ♡",
 
             // Section 3
-            noteDate: "Tanggal: Selamat Hari Pacar ✨",
-            noteHeading: "“Kamu selalu bikin hari-hari biasa terasa jauh lebih spesial.”",
-            noteP1: "Kadang aku suka mikir, betapa beruntungnya aku punya kamu di hidupku. Kamu bikin aku merasa aman, bahagia, dan sangat dihargai.",
-            noteP2: "Bahkan di hari yang paling sepi dan biasa aja, ngobrol sama kamu atau lihat senyum kamu langsung bikin hariku cerah lagi. Terima kasih ya sudah selalu mendengarkan, menenangkan, dan jadi orang paling favoritku di dunia.",
+            noteDate: "Happy Boyfriend Day, sayang 🤍",
+            noteHeading: "“Happy Boyfriend Day, sayang 🤍”",
+            noteP1: "Terima kasih sudah hadir di hidup aku, sudah selalu menemani, mendengarkan, memahami, dan menerima aku apa adanya. Terima kasih untuk semua perhatian, kesabaran, waktu, dan kasih sayang yang kamu kasih ke aku.",
+            noteP2: "Aku mungkin nggak selalu bisa mengungkapkan semuanya dengan kata-kata, tapi aku benar-benar bersyukur punya kamu. Aku sayang banget sama kamu, lebih dari yang bisa aku jelaskan. Aku berharap kita bisa terus bersama, saling menjaga, saling menguatkan, dan melewati banyak hal bersama. Terima kasih sudah menjadi seseorang yang begitu berarti buat aku. Aku sayang kamu sepenuh hati, hari ini, besok, dan seterusnya. 🤍🫶🏻",
             noteSig: 'Selalu milikmu,<br><span class="handwritten-sig">Dengan seluruh cintaku ♡</span>',
 
             // Section 4
@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
             btnYes: "Yes ♡",
             btnNo: "No",
             funnyNoTexts: ['Are you sure? 🥺', 'Really? 😜', 'Wrong button! ♡', 'Yes! ♡'],
-            
+
             // Section 1
             sec1Badge: "Section 01",
             sec1Title: "Things I Like About You... ♡",
@@ -109,7 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
             note5Text: "just… you ♡",
             note5Sub: "Everything about you. Exactly as you are, every single day.",
             tapHint: "tap me! ♡",
-            
+
             // Section 2
             sec2Badge: "Section 02",
             sec2Title: "Our Little Moments 📸",
@@ -216,7 +216,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const bgMusic = document.getElementById('bg-music');
     const musicToggleBtn = document.getElementById('music-toggle-btn');
     const musicBtnText = document.getElementById('music-btn-text');
-    
+
     // Section Player Elements
     const cassetteTape = document.getElementById('cassette-tape');
     const playerPlayIcon = document.getElementById('player-play-icon');
@@ -403,7 +403,7 @@ document.addEventListener('DOMContentLoaded', () => {
         note.addEventListener('click', () => {
             const rect = note.getBoundingClientRect();
             spawnBurstDoodles(rect.left + rect.width / 2, rect.top + rect.height / 2, 8);
-            
+
             note.style.transform = 'scale(1.08) rotate(0deg)';
             setTimeout(() => {
                 note.style.transform = '';
@@ -483,13 +483,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function initMemoryGame() {
         if (!memoryGameGrid) return;
-        
+
         // Reset state
         flippedCards = [];
         matchedCount = 0;
         movesCount = 0;
         isLockBoard = false;
-        
+
         if (gameMatchesCount) gameMatchesCount.textContent = '0';
         if (gameMovesCount) gameMovesCount.textContent = '0';
         if (gameRewardBox) gameRewardBox.classList.add('hidden');
@@ -694,18 +694,18 @@ document.addEventListener('DOMContentLoaded', () => {
             const p = document.createElement('div');
             p.className = 'doodle-confetti';
             p.textContent = symbols[Math.floor(Math.random() * symbols.length)];
-            
+
             const vx = (Math.random() - 0.5) * 160 + 'px';
             const vy = (Math.random() - 0.8) * 160 + 'px';
             const rot = (Math.random() - 0.5) * 360 + 'deg';
-            
+
             p.style.left = x + 'px';
             p.style.top = y + 'px';
             p.style.setProperty('--vx', vx);
             p.style.setProperty('--vy', vy);
             p.style.setProperty('--rot', rot);
             p.style.color = Math.random() > 0.5 ? '#E85D75' : '#2C221E';
-            
+
             document.body.appendChild(p);
 
             setTimeout(() => {
@@ -721,10 +721,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 const p = document.createElement('div');
                 p.className = 'doodle-confetti';
                 p.textContent = symbols[Math.floor(Math.random() * symbols.length)];
-                
+
                 const startX = Math.random() * window.innerWidth;
                 const startY = Math.random() * (window.innerHeight * 0.4) + (window.innerHeight * 0.3);
-                
+
                 const vx = (Math.random() - 0.5) * 300 + 'px';
                 const vy = (Math.random() - 0.7) * 400 + 'px';
                 const rot = (Math.random() - 0.5) * 720 + 'deg';
@@ -735,7 +735,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 p.style.setProperty('--vx', vx);
                 p.style.setProperty('--vy', vy);
                 p.style.setProperty('--rot', rot);
-                
+
                 document.body.appendChild(p);
 
                 setTimeout(() => {
